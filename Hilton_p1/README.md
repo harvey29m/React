@@ -1,3 +1,3 @@
 hilton part1 
 
-open index.js with chrome/ff
+open index.html with chrome/ff
