@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color:#ffffff;
+}
+body{
+  background-color:#221f1f;
+}
+button{
+  height:30px;
+  width:60px;
+  border:2px solid rgba(255, 255, 255, 0.2);
+  border-radius:20px;
+  color:black;
+}
+.clearFloat:after{
+  display:block;
+  content:'.';
+  clear:both;
+  visibility:hidden;
+  }
+.content{
+  padding:10px 5%;
+}
+/* list style */
+
+.list li,
+nav li,
+#mylist li
+{
+  float: left;
+  margin-right:10px;
+  list-style: none;
+  position:relative
+}
+.content li{
+  margin:10px 10px 0px 0px;
+}
+nav li{
+  padding:7px 10px;
+  border-radius: 3px;
+}
+.list li,
+.list li img{
+  width:166px;
+  height:233px;
+}
+
+
+/* remove or add*/
+.hidden{
+  width:166px;
+  height:100%;
+  position: absolute;
+  top:0px;
+  padding:15px;
+  opacity: 0;
+  background:linear-gradient(to bottom, #221f1f 0%, rgba(0, 0, 0, 0) 100%)
+}
+
+.list>li:hover div{
+  opacity: 1;
+  transition:opacity 1.25s;
+}
+
+
+.fixed{
+  display: block;
+  position: fixed;
+  top:0px;
+  width:100%;
+  padding:5%;
+  z-index: 10;
+  background:linear-gradient(to bottom, black 0%, rgba(0, 0, 0, 0) 100%)
+}
+
+
+/* logo */
+#netflix-logo{
+  height:45px;
+  width:167px;
+  fill:#e50914;
+  float:left;
+  margin-right:10px;
+  
+}
+#netflix-logo:hover path{
+  fill: #ffffff;
+  transition: fill 0.5s ease;
+}
+nav li:hover{
+background-color: #e50914;
+cursor: pointer;
+transition: background-color 1.25s ease;
+}
+
+/* search/nav bar */
+#search-bar{
+  outline:none;
+  height:35px;
+  width:200px;
+  padding:0 10px;
+  background: transparent;
+  border-radius: 35px;
+  border:2px solid rgba(245, 245, 241, 0.1);
+}
+#search-bar:focus {
+  border-color:#e50914;
+}
+.firstRow{
+  height:191px;  
+}
+button{
+  display: block;
+}
+
