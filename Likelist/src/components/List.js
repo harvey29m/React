@@ -1,17 +1,18 @@
 //render list with different name
 import React, {Component} from 'react'
-import Button from './Button'
 import { PropTypes } from 'prop-types'
 
-const List=(listName,actionName)=>{
-    return class extends Component{
-          render() {
-            let {data}=this.props
+const List=({listName,actionName,data,onClick})=>{
             let list=data.map((item,index)=>{
                 return (
                 <li key={item.title}>
                     <img src={item.img} alt=''></img>
-                    <Button actionName={actionName} onClick={this.props.onClick} index={index} title={item.title}/>
+                    <div className='hidden'>
+                        {item.title} 
+                            <button onClick={()=>onClick(index)}>
+                                {actionName}
+                            </button>
+                    </div>
                 </li>
                 )
                 
@@ -24,8 +25,6 @@ const List=(listName,actionName)=>{
                 </ul>
               </div>
             )
-          }
-    }
 }
 
 List.propTypes={

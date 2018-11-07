@@ -1,4 +1,5 @@
-import movie from '../api/movies'
+import axios from 'axios'
+
 export const removeAction=(index)=>({
     type:'REMOVE',
     index
@@ -14,9 +15,8 @@ const receiveMovies=(movies)=>({
     movies
 })
 
-export const getAllMovies=()=>(dispatch)=>{
-    movie.getAllMovies((movies)=>{
-        dispatch(receiveMovies(movies))
-    })
-}
 
+export const getAllMovies=()=>dispatch=>{
+    return axios.get('/movies.json')
+    .then(res=>dispatch(receiveMovies(res.data)))
+}
